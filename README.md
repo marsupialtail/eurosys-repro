@@ -20,7 +20,7 @@ After the logs are compressed, upload the compressed logs to an S3 bucket.
 
 For search, just run https://github.com/marsupialtail/logcloud-experiments/blob/master/loggrep/search-loggrep.sh with the included binary thulr_cmdline. Modify the S3 bucket path accordingly.
 
-##LogCloud
+## LogCloud
 
 LogCloud is packaged under the name "rottnest" on pypi. Install the right version of LogCloud accordingly:
 ~~~
