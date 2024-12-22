@@ -6,8 +6,7 @@ do_query() {
         end=$(($(date +%s%N)/1000000))
         download_duration=$(( end - start ))
         start=$(($(date +%s%N)/1000000))
-        # ./thulr_cmdline $1 $2
-	parallel -j1 ./thulr_cmdline $1/split_{}/ $2 ::: {1..8}
+        ./thulr_cmdline $1 $2
         end=$(($(date +%s%N)/1000000))
         search_duration=$(( end - start ))
 
