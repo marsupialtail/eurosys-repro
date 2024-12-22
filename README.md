@@ -2,7 +2,7 @@
 
 ## Dataset
 
-LogHub data: https://zenodo.org/records/8196385. Spark, Hdfs, Windows, Hadoop and Thunderbird are used. Unzip the logs into text files under their own directories. 
+LogHub data: https://zenodo.org/records/8196385. Hdfs, Windows, Hadoop and Thunderbird are used. Unzip the logs into text files under their own directories. 
 
 ## OpenSearch
 
@@ -24,12 +24,9 @@ For search, just run https://github.com/marsupialtail/logcloud-experiments/blob/
 
 LogCloud is packaged under the name "rottnest" on pypi. Install the right version of LogCloud accordingly:
 ~~~
-pip3 install rottnest==1.0.1 # Wavelet tree implementation, no early stopping
-pip3 install rottnest==1.0.2 # Wavelet tree implementation, early stopping
-pip3 install rottnest==1.0.3 # custom FM-index implementation, no early stopping
-pip3 install rottnest==1.0.4 # custom FM-index implementation, early stopping
+pip3 install rottnest==1.5
 ~~~
 
-To compress the logs, use: https://github.com/marsupialtail/logcloud-experiments/blob/master/logcloud/compress.sh. Change the log directories in the script. The upload the output indices to an S3 bucket.
+To compress the logs, use: https://github.com/marsupialtail/logcloud-experiments/blob/master/logcloud/index.py. Change the log directories in the script. The upload the output indices to an S3 bucket.
 
-To search the logs, run: https://github.com/marsupialtail/logcloud-experiments/blob/master/logcloud/search-logcloud.sh. Change the S3 bucket path accordingly.
+To search the logs, run: https://github.com/marsupialtail/logcloud-experiments/blob/master/logcloud/search.py. Change the S3 bucket path accordingly.
